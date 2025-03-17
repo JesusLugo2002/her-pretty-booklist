@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import DBConnection from './firebase';
 
-import Book from './components/Book.vue';
+import BookItem from './components/BookItem.vue';
 import AddBook from './components/AddBook.vue';
 
 const db = new DBConnection()
@@ -19,9 +19,9 @@ onMounted(async() => {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container pb-3">
     <ul>
-      <Book v-for="book in books" :book="book" :db="db"/>
+      <BookItem v-for="book in books" :book="book" :db="db"/>
     </ul>
     <AddBook :db="db"/>
   </div>
@@ -30,7 +30,7 @@ onMounted(async() => {
 <style>
 body {
   font-family: "Caveat", serif;
-  background-image: url('background.avif');
+  background-image: url('background.webp');
   background-repeat: repeat-y;
   background-size: cover;
   background-position: -40px;
