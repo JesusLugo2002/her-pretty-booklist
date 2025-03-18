@@ -14,6 +14,7 @@ onMounted(async() => {
     booksData.forEach(async(book) => {
       books.value.push(book)
     });
+    books.value.sort((a: any, b: any) => a.author.localeCompare(b.author))
   }
 })
 </script>
