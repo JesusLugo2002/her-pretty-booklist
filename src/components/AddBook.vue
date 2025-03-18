@@ -24,8 +24,11 @@ function addBook() {
         cover_url: cover_url.value,
         bought: false
     }
-    console.log(new_book)
     db.addBook(new_book);
+}
+
+function cleanFields() {
+    title.value = author.value = saga.value = editorial.value = language.value = notes.value = cover_type.value = cover_url.value = ""
 }
 </script>
 
@@ -78,7 +81,8 @@ function addBook() {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <input type="submit" value="Añadir libro" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary" @click="cleanFields">Limpiar campos</button>
+                    <input type="submit" value="Añadir libro" class="btn btn-success">
                 </div>
             </form>
             </div>
