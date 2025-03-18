@@ -69,7 +69,7 @@ function cleanFields() {
                     </div>
                     <div class="row">
                         <select name="language" id="language" v-model="language" class="form-select col mb-3 mx-2">
-                            <option value="English" selected>English</option>
+                            <option value="Inglés" selected>Inglés</option>
                             <option value="Español">Español</option>
                         </select>                       
                         <select name="cover_type" id="Cover type" v-model="cover_type" class="form-select col mb-3 mx-2">
