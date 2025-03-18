@@ -20,6 +20,7 @@ onMounted(async() => {
 
 <template>
   <div class="container pb-3">
+    <h1 class="text-center">My Pretty Booklist (for my queen)</h1>
     <ul>
       <BookItem v-for="book in books" :book="book" :db="db"/>
     </ul>
@@ -28,7 +29,7 @@ onMounted(async() => {
 </template>
 
 <style>
-body {
+body, h1 {
   font-family: "Caveat", serif;
   background-image: url('background.webp');
   background-repeat: repeat-y;

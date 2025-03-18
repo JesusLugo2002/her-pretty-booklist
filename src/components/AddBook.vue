@@ -25,6 +25,7 @@ function addBook() {
         bought: false
     }
     db.addBook(new_book);
+    alert("Libro añadido!")
 }
 
 function cleanFields() {
@@ -46,29 +47,35 @@ function cleanFields() {
             </div>
             <form @submit.prevent="addBook" class="form">
                 <div class="modal-body">
-                    <div class="form-floating mb-3">
-                        <input type="text" id="title" v-model="title" class="form-control">
-                        <label for="title">Title</label>
+                    <div class="row">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="title" v-model="title" class="form-control">
+                            <label for="title">Title</label>
+                        </div>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" id="author" v-model="author" class="form-control">
-                        <label for="author">Author</label>
+                    <div class="row">
+                        <div class="form-floating mb-3 col">
+                            <input type="text" id="author" v-model="author" class="form-control">
+                            <label for="author">Author</label>
+                        </div>
+                        <div class="form-floating mb-3 col">
+                            <input type="text" id="editorial" v-model="editorial" class="form-control">
+                            <label for="editorial">Editorial</label>
+                        </div>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" id="editorial" v-model="editorial" class="form-control">
-                        <label for="editorial">Editorial</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" id="saga" v-model="saga" class="form-control">
-                        <label for="saga">Saga</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" id="language" v-model="language" class="form-control">
-                        <label for="language">Language</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" id="cover_type" v-model="cover_type" class="form-control">
-                        <label for="cover_type">Cover type</label>
+                    <div class="row">
+                        <div class="form-floating mb-3 col">
+                            <input type="text" id="saga" v-model="saga" class="form-control">
+                            <label for="saga">Saga</label>
+                        </div>
+                        <div class="form-floating mb-3 col">
+                            <input type="text" id="language" v-model="language" class="form-control">
+                            <label for="language">Language</label>
+                        </div>
+                        <div class="form-floating mb-3 col">
+                            <input type="text" id="cover_type" v-model="cover_type" class="form-control">
+                            <label for="cover_type">Cover type</label>
+                        </div>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" id="cover_url" v-model="cover_url" class="form-control">
