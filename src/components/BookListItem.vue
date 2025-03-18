@@ -20,7 +20,9 @@ function toggleBought() {
                 <p><b>{{ book.title }}</b> by {{ book.author }}</p>
             </div>
             <div class="col">
-                <button class="btn btn-success w-100" @click="toggleBought">Marcar</button>
+                <button :class="'btn w-100 ' + (is_bought ? 'btn-danger' : 'btn-success')" @click="toggleBought">
+                    {{ is_bought ? 'Desmarcar' : 'Marcar' }}
+                </button>
             </div>
         </div>
     </li>

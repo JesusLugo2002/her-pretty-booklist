@@ -34,7 +34,7 @@ function cleanFields() {
 </script>
 
 <template>
-    <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Añadir libro
     </button>
 

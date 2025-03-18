@@ -32,7 +32,9 @@ function toggleBought() {
 
         <div class="col-2">
             <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                <button class="btn btn-success w-100" @click="toggleBought">Marcar</button>
+                <button :class="'btn w-100 ' + (is_bought ? 'btn-danger' : 'btn-success')" @click="toggleBought">
+                    {{ is_bought ? 'Desmarcar' : 'Marcar' }}
+                </button>
             </div>
         </div>
     </li>

@@ -32,11 +32,13 @@ function changeView() {
 
 <template>
   <div class="container pb-3">
-    <h1 class="text-center">My Pretty Booklist (for my queen)</h1>
-    <div class="row d-flex justify-content-center flex-column">
-      <button @click="changeView" class="btn btn-primary">Cambiar vista</button>
+    <h1 class="text-center my-2">My Pretty Booklist (for my queen)</h1>
+
+    <div class="d-flex justify-content-center my-2">
+      <button @click="changeView" class="btn btn-primary mx-3">Cambiar vista</button>
       <AddBook :db="db"/>
     </div>
+
     <div v-if="show_mode == 'cards'">
       <ul>
         <BookItem v-for="book in books" :book="book" :db="db"/>
@@ -53,9 +55,5 @@ function changeView() {
 <style>
 body, h1 {
   font-family: "Caveat", serif;
-  background-image: url('background.webp');
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: -40px;
 }
 </style>
