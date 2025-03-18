@@ -63,19 +63,19 @@ function cleanFields() {
                             <label for="editorial">Editorial</label>
                         </div>
                     </div>
+                    <div class="form-floating mb-3 col">
+                        <input type="text" id="saga" v-model="saga" class="form-control">
+                        <label for="saga">Saga</label>
+                    </div>
                     <div class="row">
-                        <div class="form-floating mb-3 col">
-                            <input type="text" id="saga" v-model="saga" class="form-control">
-                            <label for="saga">Saga</label>
-                        </div>
-                        <div class="form-floating mb-3 col">
-                            <input type="text" id="language" v-model="language" class="form-control">
-                            <label for="language">Language</label>
-                        </div>
-                        <div class="form-floating mb-3 col">
-                            <input type="text" id="cover_type" v-model="cover_type" class="form-control">
-                            <label for="cover_type">Cover type</label>
-                        </div>
+                        <select name="language" id="language" v-model="language" class="form-select col mb-3 mx-2">
+                            <option value="English" selected>English</option>
+                            <option value="Español">Español</option>
+                        </select>                       
+                        <select name="cover_type" id="Cover type" v-model="cover_type" class="form-select col mb-3 mx-2">
+                            <option value="Tapa blanda" selected>Tapa blanda</option>
+                            <option value="Tapa dura">Tapa dura</option>
+                        </select>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" id="cover_url" v-model="cover_url" class="form-control">
